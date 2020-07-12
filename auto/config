@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+lb config noauto \
+	--linux-packages linux-image-4.19.0-9-rt\
+	--distribution buster \
+	--binary-images iso-hybrid \
+	--debian-installer live \
+	--archive-areas "main contrib non-free" \
+	--iso-application "LinuxCNC-2.8.0" \
+	--iso-preparer "bodgesoc@gmail.com" \
+	--iso-volume "LinuxCNC_2.8.0" \
+	--iso-publisher "www.linuxcnc.org" \
+	"${@}"
+ 
