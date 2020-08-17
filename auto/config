@@ -12,5 +12,6 @@ lb config noauto \
 	--iso-preparer "bodgesoc@gmail.com" \
 	--iso-volume "LinuxCNC_2.8.0" \
 	--iso-publisher "www.linuxcnc.org" \
+	--apt-recommends true \
 	"${@}"
  

@@ -1,7 +1,10 @@
 lightdm
 xfce4
+xfce4-terminal
+lsb-release
 wicd
 synaptic
 geany
 iceweasel
 atril
+mlocate
