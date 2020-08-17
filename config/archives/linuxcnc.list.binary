@@ -1,2 +1,2 @@
-deb     http://www.linuxcnc.org/ buster 2.8-rtpreempt
-deb-src     http://www.linuxcnc.org/ buster 2.8-rtpreempt
+deb     http://www.linuxcnc.org/ buster base 2.8-rtpreempt
+deb-src http://www.linuxcnc.org/ buster base 2.8-rtpreempt
