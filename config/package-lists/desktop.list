@@ -2,7 +2,8 @@ lightdm
 xfce4
 xfce4-terminal
 lsb-release
-wicd
+nm-tray
+pciutils
 synaptic
 geany
 iceweasel
