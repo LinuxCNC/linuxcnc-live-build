@@ -6,5 +6,5 @@ Mirror-Bootstrap: http://deb.debian.org/debian/
 
 [FIXME]
 Configuration-Version: 1:20190311
-Name: live-image
+Name: LinuxCNC_2.8.2
 Type: iso-hybrid
