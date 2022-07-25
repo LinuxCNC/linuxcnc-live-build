@@ -1,4 +1,4 @@
-deb     http://www.linuxcnc.org/ buster base 2.8-rtpreempt
-deb-src     http://www.linuxcnc.org/ buster base 2.8-rtpreempt
-deb     http://buildbot.linuxcnc.org/ buster 2.8-rtpreempt
-deb-src     http://buildbot.linuxcnc.org/ buster 2.8-rtpreempt
+#deb     http://www.linuxcnc.org/ bookworm base 2.8-rtpreempt
+#deb-src     http://www.linuxcnc.org/ bookworm base 2.8-rtpreempt
+#deb     http://buildbot.linuxcnc.org/ bookworm 2.8-rtpreempt
+#deb-src     http://buildbot.linuxcnc.org/ bookworm 2.8-rtpreempt

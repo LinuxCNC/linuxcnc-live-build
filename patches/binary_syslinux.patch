@@ -1,0 +1,20 @@
+Pass more values on to the SVG generation.
+
+Submitted upstream as <URL: https://bugs.debian.org/1015782 >.
+
+Patch by Andy Pugh.
+
+--- binary_syslinux?inline=false	2022-07-21 08:24:47.290238867 +0200
++++ patches/binary_syslinux	2022-07-21 08:02:59.462562152 +0200
+@@ -257,6 +257,11 @@
+ 			-e "s|@LIVE_BOOT_VERSION@|${_LIVE_BOOT_VERSION}|g" \
+ 			-e "s|@LIVE_CONFIG_VERSION@|${_LIVE_CONFIG_VERSION}|g" \
+ 			-e "s|@LIVE_TOOLS_VERSION@|${_LIVE_TOOLS_VERSION}|g" \
++			-e "s|@LB_ISO_APPLICATION@|${LB_ISO_APPLICATION}|g" \
++			-e "s|@LB_ISO_PREPARER@|${LB_ISO_PREPARER}|g" \
++			-e "s|@LB_ISO_PUBLISHER@|${LB_ISO_PUBLISHER}|g" \
++			-e "s|@LB_ISO_VOLUME@|${LB_ISO_VOLUME}|g" \
++			-e "s|@LB_LINUX_PACKAGES@|${LB_LINUX_PACKAGES}|g" \
+ 		"${_FILE}"
+ 	fi
+ done
