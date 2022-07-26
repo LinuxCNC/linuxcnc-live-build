@@ -1,4 +1,4 @@
-# buster-live-build
+# linuxcnc-live-build
 
     sudo lb config -m http://archive.debian.org/debian --parent-mirror-chroot-security  http://archive.debian.org/debian-security --parent-mirror-binary http://archive.debian.org/debian
     sudo lb build
