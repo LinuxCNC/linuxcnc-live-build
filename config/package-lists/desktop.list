@@ -1,6 +1,7 @@
 lightdm
 xfce4
 xfce4-terminal
+task-xfce-desktop
 lsb-release
 nm-tray
 pciutils
@@ -10,3 +11,11 @@ firefox-esr
 atril
 mlocate
 isenkram
+bash-completion
+build-essential
+galculator
+gparted
+linux-perf
+mesa-utils
+openssh-server
+vim-gtk3
