@@ -3,16 +3,18 @@
 set -e
 
 lb config noauto \
-	--linux-packages linux-image-4.19.0-9-rt\
+	--linux-packages linux-image-rt \
 	--distribution buster \
 	--binary-images iso-hybrid \
 	--debian-installer live \
 	--archive-areas "main contrib non-free" \
 	--iso-application "LinuxCNC-2.8.2" \
-	--iso-preparer "bodgesoc@gmail.com" \
+	--iso-preparer "emc-developers@lists.sourceforge.net" \
 	--iso-volume "LinuxCNC_2.8.2" \
 	--image-name "LinuxCNC_2.8.2" \
 	--iso-publisher "www.linuxcnc.org" \
 	--apt-recommends true \
+	--parent-mirror-bootstrap http://deb.debian.org/debian \
+	--parent-mirror-binary http://deb.debian.org/debian \
+	--parent-mirror-chroot-security http://deb.debian.org/debian-security \
 	"${@}"
- 
