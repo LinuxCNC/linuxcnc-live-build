@@ -16,11 +16,12 @@ lb config noauto \
 	--apt-recommends true \
 	--security false \
 	--updates false \
-	--parent-mirror-bootstrap http://deb.debian.org/debian \
-	--parent-mirror-binary http://deb.debian.org/debian \
-	"${@}"
 
 # Add this and enable security and updates once bookworm become stable.
 # It is currently Debian/testing, which do not have updates nor security
 # APT repo.
 #--parent-mirror-chroot-security http://deb.debian.org/debian-security
+	--parent-mirror-bootstrap http://deb.debian.org/debian \
+	--parent-mirror-binary http://deb.debian.org/debian \
+	--parent-mirror-chroot-security http://deb.debian.org/debian-security \
+	"${@}"
