@@ -2,7 +2,7 @@
 
     git clone https://github.com/LinuxCNC/linuxcnc-live-build
     cd linuxcnc-live-build
-    git checkout buster
+    git checkout bookworm
     lb config
     sudo lb build
     
