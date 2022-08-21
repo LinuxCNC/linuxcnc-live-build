@@ -1,5 +1,4 @@
 [Image]
-Architecture: amd64
 Archive-Areas: main contrib non-free
 Distribution: bookworm
 Mirror-Bootstrap: http://deb.debian.org/debian/

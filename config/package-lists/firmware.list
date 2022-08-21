@@ -1,3 +1,4 @@
+#if ARCHITECTURES i386 amd64
 amd64-microcode
 atmel-firmware
 bladerf-firmware-fx3
@@ -25,3 +26,4 @@ firmware-ti-connectivity
 firmware-zd1211
 hdmi2usb-fx2-firmware
 intel-microcode
+#endif
