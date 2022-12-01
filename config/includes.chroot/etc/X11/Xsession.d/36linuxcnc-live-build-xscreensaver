@@ -1,0 +1,13 @@
+#
+# Disable xscreensaver locking, fixing
+# <URL: https://github.com/LinuxCNC/linuxcnc-live-build/issues/16 >.
+# See also live-config components/1180-xscreensaver/
+
+pkg_is_installed() {
+    dpkg -l "$1" > /dev/null 2>&1
+}
+
+if [ -n "$DISPLAY" ] && ! pkg_is_installed "xscreensaver"
+then
+    echo "XScreenSaver.lock: no" | xrdb -merge
+fi
