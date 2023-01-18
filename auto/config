@@ -6,7 +6,7 @@ lb config noauto \
 	--linux-packages linux-image-rt \
 	--distribution bookworm \
 	--binary-images iso-hybrid \
-	--debian-installer live \
+	--debian-installer netboot \
 	--archive-areas "main contrib non-free" \
 	--iso-application "LinuxCNC-2.9pre2" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
