@@ -7,7 +7,7 @@ lb config noauto \
 	--distribution bookworm \
 	--binary-images iso-hybrid \
 	--debian-installer netboot \
-	--archive-areas "main contrib non-free" \
+	--archive-areas "main contrib non-free non-free-firmware" \
 	--iso-application "LinuxCNC-2.9pre2" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
 	--iso-volume "LinuxCNC_2.9pre" \
