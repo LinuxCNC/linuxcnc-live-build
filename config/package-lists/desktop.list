@@ -1,5 +1,20 @@
 lightdm
 light-locker-
+
+# Don't install libreoffice on my CNC machine...
+libreoffice-base-core-
+libreoffice-calc-
+libreoffice-common-
+libreoffice-core-
+libreoffice-draw-
+libreoffice-gtk3-
+libreoffice-help-common-
+libreoffice-help-en-us-
+libreoffice-impress-
+libreoffice-math-
+libreoffice-style-colibre-
+libreoffice-writer-
+
 xfce4
 xfce4-terminal
 task-xfce-desktop
