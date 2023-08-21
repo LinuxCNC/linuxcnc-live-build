@@ -6,8 +6,8 @@ lb config noauto \
 	--linux-packages linux-image-rt \
 	--distribution bookworm \
 	--binary-images iso-hybrid \
-	--debian-installer netboot \
-	--archive-areas "main contrib non-free non-free-firmware" \
+	--debian-installer live \
+	--archive-areas "main contrib non-free-firmware" \
 	--iso-application "LinuxCNC-2.9pre1" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
 	--iso-volume "LinuxCNC_2.9pre" \
@@ -21,7 +21,4 @@ lb config noauto \
 	--parent-mirror-chroot-security http://deb.debian.org/debian-security \
 	"${@}"
 
-# Add this and enable security and updates once bookworm become stable.
-# It is currently Debian/testing, which do not have updates nor security
-# APT repo.
-#--parent-mirror-chroot-security http://deb.debian.org/debian-security
+# Debian 12 strips out non-free if it exists nad also removes non-free-firmware if installed to HDD

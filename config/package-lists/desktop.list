@@ -19,7 +19,8 @@ xfce4
 xfce4-terminal
 task-xfce-desktop
 lsb-release
-nm-tray
+# remove nmtray and use network-manager
+network-manager
 pciutils
 synaptic
 geany
@@ -37,3 +38,11 @@ openssh-server
 vim-gtk3
 installation-report
 rt-tests
+
+# We need to add some more utilities which are likely to be used if following the 2.9 Getting Linuxcnc Methods
+linux-headers-rt-amd64
+dkms
+grub-customizer
+wget
+curl
+gdebi
