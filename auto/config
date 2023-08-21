@@ -21,4 +21,4 @@ lb config noauto \
 	--parent-mirror-chroot-security http://deb.debian.org/debian-security \
 	"${@}"
 
-# Debian 12 strips out non-free if it exists nad also removes non-free-firmware if installed to HDD
+# Debian 12 strips out non-free if it exists and also removes non-free-firmware if installed to HDD
