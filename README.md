@@ -19,7 +19,6 @@
     added  utilities.list to config/package-lists to include some utilities that are useful when following Getting Linuxcnc docs.
     
  # To do
-    Add some apt trickery to allow select non-free packages as R8168/R8125 NIC drivers are in non-free because they are not kernel firmware.
     Add QTPYVCP repositories now they have one.
     Add Ethercat repositories now they have an official Debian Repository
     NOTE: external repositories provided as a convenience to users if they wish to use companion products. No Software to be installed by this installer.
