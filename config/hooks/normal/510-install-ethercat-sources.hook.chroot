@@ -1,0 +1,7 @@
+tee -a /etc/apt/sources.list.d/ighvh.sources > /dev/null <<EOT
+Types: deb
+Signed-By: /usr/local/share/keyrings/ighvh.gpg
+Suites: ./
+URIs: http://download.opensuse.org/repositories/home:/ighvh:/branches:/science:/EtherLabDKMS/Debian_12/
+EOT
+

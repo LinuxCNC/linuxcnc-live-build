@@ -1,0 +1,3 @@
+Package: *
+Pin: release c=non-free
+Pin-Priority: 101
