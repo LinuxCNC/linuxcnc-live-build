@@ -1,0 +1,3 @@
+echo "0520Qtpyvsp setup script"
+curl sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /usr/share/keyrings/kcjengr.gpg
+sudo gpg --homedir /tmp --no-default-keyring --keyring /usr/share/keyrings/QTPYVCP.gpg --keyserver keys.openpgp.org --recv-keys 2DEC041F290DF85A

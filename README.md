@@ -17,8 +17,10 @@
     replaced buggy nmtray with network-manager  
     changed README.me to use su for lb build 
     added  utilities.list to config/package-lists to include some utilities that are useful when following Getting Linuxcnc docs.
+    Added QTPYVCP repositories now they have one.
     
  # To do
-    Add QTPYVCP repositories now they have one.
+   It seems that the non-free-firmware is reverting to non-free in /etc/apt sources.list for some reason even if it is set in the /auto/config file
+   
     NOTE: external repositories provided as a convenience to users if they wish to use companion products. No Software to be installed by this installer.
     Check that the non-free repository is correctly enabled
