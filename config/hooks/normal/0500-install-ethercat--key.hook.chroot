@@ -1,4 +1,0 @@
-mkdir -p /usr/local/share/keyrings/
-wget -O- https://build.opensuse.org/projects/home:ighvh:branches:science:EtherLabDKMS/signing_keys/download?kind=gpg | gpg --dearmor | dd of=/usr/local/share/keyrings/ighvh.gpg
-
-

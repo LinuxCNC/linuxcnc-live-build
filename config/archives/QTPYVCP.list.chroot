@@ -1,1 +1,0 @@
-deb [arch=amd64 signed-by=/usr/share/keyrings/QTPYVCP.gpg] https://repository.qtpyvcp.com/apt develop main 

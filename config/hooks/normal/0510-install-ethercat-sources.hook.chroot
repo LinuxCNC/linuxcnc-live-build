@@ -1,7 +1,10 @@
+#!/bin/sh
+sudo mkdir -p /usr/local/share/keyrings/
+wget -O- https://build.opensuse.org/projects/science:EtherLab/signing_keys/download?kind=gpg | gpg --dearmor | sudo dd of=/usr/local/share/keyrings/science_EtherLab.gpg
 tee -a /etc/apt/sources.list.d/ighvh.sources > /dev/null <<EOT
 Types: deb
-Signed-By: /usr/local/share/keyrings/ighvh.gpg
+Signed-By: /usr/local/share/keyrings/science_EtherLab.gpg
 Suites: ./
-URIs: http://download.opensuse.org/repositories/home:/ighvh:/branches:/science:/EtherLabDKMS/Debian_12/
+URIs: http://download.opensuse.org/repositories/science:/EtherLab/Debian_12/
 EOT
 
