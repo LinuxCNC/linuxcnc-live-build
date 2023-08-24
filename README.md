@@ -21,9 +21,7 @@ Puts the .iso file in the ```linuxcnc-live-build``` folder.
 - Added ```Probe Basic``` repository. To install: ```sudo apt update``` then ```sudo apt install python3-probe-basic```
 
 - NOTE: External repositories provided as a convenience to users if they wish to use companion products. No Software to be installed by this installer.
-    
- # To do
-- It seems that the non-free-firmware is reverting to non-free in /etc/apt sources.list for some reason even if it is set in the /auto/config file   
+   
 
 
    
