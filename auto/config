@@ -7,11 +7,19 @@ lb config noauto \
 	--distribution bookworm \
 	--binary-images iso-hybrid \
 	--debian-installer live \
+<<<<<<< Updated upstream
 	--archive-areas "main contrib non-free-firmware non-free" \
 	--iso-application "LinuxCNC-2.9pre1" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
 	--iso-volume "LinuxCNC_2.9pre" \
 	--image-name "LinuxCNC_2.9pre" \
+=======
+	--archive-areas "main contrib non-free non-free-firmware" \
+	--iso-application "LinuxCNC-2.9.pre" \
+	--iso-preparer "emc-developers@lists.sourceforge.net" \
+	--iso-volume "LinuxCNC_2.9.pre" \
+	--image-name "LinuxCNC_2.9.pre" \
+>>>>>>> Stashed changes
 	--iso-publisher "www.linuxcnc.org" \
 	--apt-recommends true \
 	--security true \
