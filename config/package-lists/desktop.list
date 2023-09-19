@@ -46,3 +46,8 @@ grub-customizer
 wget
 curl
 gdebi
+
+# These may be missing  Linuxcnc run time dependencies so we will add them just in case
+libgl1-mesa-glx 
+libgl1-mesa-dri 
+xserver-xorg-core
