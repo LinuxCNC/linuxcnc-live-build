@@ -15,6 +15,10 @@ libreoffice-math-
 libreoffice-style-colibre-
 libreoffice-writer-
 
+# Some complaints about these packages so will try to exclude
+brltty-
+speech-dispatcher-
+
 xfce4
 xfce4-terminal
 task-xfce-desktop
