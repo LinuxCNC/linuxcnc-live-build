@@ -1,5 +1,5 @@
 #!/bin/sh
-curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | sudo tee /usr/share/keyrings/kcjengr.gpg
-sudo gpg --homedir /tmp --no-default-keyring --keyring /usr/share/keyrings/QTPYVCP.gpg --keyserver keys.openpgp.org --recv-keys 2DEC041F290DF85A
-sudo echo "deb [arch=amd64 signed-by=/usr/share/keyrings/QTPYVCP.gpg] https://repository.qtpyvcp.com/apt develop main " | sudo tee -a /etc/apt/sources.list.d/qtpyvcp.list >/dev/null
-#deb [arch=amd64 signed-by=/etc/apt/keyrings/QTPYVCP.gpg] https://repository.qtpyvcp.com/apt develop main 
+# Import the GPG key for the qtpyvcp repository
+gpg --keyserver keys.openpgp.org --recv-keys 2DEC041F290DF85A --keyring /etc/apt/keyrings
+curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | tee /etc/apt/keyrings/kcjengr.gpg
+echo "deb [arch=amd64 signed-by=/etc/apt/keyrings/kcjengr.gpg] https://repository.qtpyvcp.com/apt develop main " | tee -a /etc/apt/sources.list.d/qtpyvcp.list >/dev/null
