@@ -55,3 +55,7 @@ gdebi
 libgl1-mesa-glx 
 libgl1-mesa-dri 
 xserver-xorg-core
+
+# Keyrings
+debian-archive-keyring
+apt-transport-https
