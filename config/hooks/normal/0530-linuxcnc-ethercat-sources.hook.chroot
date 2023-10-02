@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Install the debian-archive-keyring package on Debian systems so that
-# apt-transport-https can be installed next
-apt-get install -y debian-archive-keyring
-
-# Install apt-transport-https
-apt-get install -y apt-transport-https
-
 # Create the linuxcnc-ethercat.list file
 cat << EOF > /etc/apt/sources.list.d/linuxcnc-ethercat.list
 deb [signed-by=/etc/apt/trusted.gpg.d/linuxcnc-ethercat.gpg] https://packagecloud.io/rodw-au/rodw-au/debian/ bookworm main
