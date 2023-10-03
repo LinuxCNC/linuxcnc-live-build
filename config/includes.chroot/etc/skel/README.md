@@ -1,6 +1,6 @@
 This installation installs apt sources.list entries to  repositories that are not part of the LinuxCNC project but are complementary to it.
-THey are provided as a convenience to users but there is no guarantee they will work. 
-No software is installed by this installer from these repositories
+They are provided as a convenience to users but there is no guarantee they will work. 
+No software is installed by this installer from these repositories.
 Before attempting to install additional packages be sure to:
 sudo apt update
 sudo apt upgrade
@@ -25,7 +25,7 @@ linuxcnc-ethercat - driver for LinuxCNC
 All of these need installing to use ethercat hardware from linuxCNC. This can be done as follows:
   sudo apt install ethercat-master libethercat-dev  linuxcnc-ethercat
 Additional steps are required to complete an ethercat instalation. 
-Currently these are described ion th elinuxcnc forum here
+Currently these are described ion the linuxCNC forum here
 https://forum.linuxcnc.org/ethercat/45336-ethercat-installation-from-repositories-how-to-step-by-step
 
 Note that lib-ethercat and some network drivers require use of dkms. Because dkms modifies the kernel, 
