@@ -4,3 +4,5 @@ chroot.*
 .build/
 binary/
 build.log
+*.contents
+*.files

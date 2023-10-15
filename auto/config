@@ -6,22 +6,18 @@ lb config noauto \
 	--linux-packages linux-image-rt \
 	--distribution bookworm \
 	--binary-images iso-hybrid \
-	--debian-installer netboot \
+	--debian-installer live \
 	--archive-areas "main contrib non-free non-free-firmware" \
-	--iso-application "LinuxCNC-2.9pre1" \
+	--iso-application "LinuxCNC-2.9.pre" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
-	--iso-volume "LinuxCNC_2.9pre" \
-	--image-name "LinuxCNC_2.9pre" \
+	--iso-volume "LinuxCNC_2.9.pre" \
+	--image-name "LinuxCNC_2.9.pre" \
 	--iso-publisher "www.linuxcnc.org" \
 	--apt-recommends true \
-	--security false \
-	--updates false \
+	--security true \
+	--updates true \
 	--parent-mirror-bootstrap http://deb.debian.org/debian \
 	--parent-mirror-binary http://deb.debian.org/debian \
 	--parent-mirror-chroot-security http://deb.debian.org/debian-security \
 	"${@}"
 
-# Add this and enable security and updates once bookworm become stable.
-# It is currently Debian/testing, which do not have updates nor security
-# APT repo.
-#--parent-mirror-chroot-security http://deb.debian.org/debian-security

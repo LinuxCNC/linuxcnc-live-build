@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Create the linuxcnc-ethercat.list file
+cat << EOF > /etc/apt/sources.list.d/linuxcnc-ethercat.list
+deb [signed-by=/etc/apt/trusted.gpg.d/linuxcnc-ethercat.gpg] https://packagecloud.io/rodw-au/rodw-au/debian/ bookworm main
+deb-src [signed-by=/etc/apt/trusted.gpg.d/linuxcnc-ethercat.gpg] https://packagecloud.io/rodw-au/rodw-au/debian/ bookworm main
+EOF
+
+# Import the GPG key
+curl -fsSL "https://packagecloud.io/rodw-au/rodw-au/gpgkey" | gpg --dearmor > /etc/apt/trusted.gpg.d/linuxcnc-ethercat.gpg
+
