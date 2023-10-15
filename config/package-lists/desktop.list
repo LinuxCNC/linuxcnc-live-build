@@ -15,11 +15,16 @@ libreoffice-math-
 libreoffice-style-colibre-
 libreoffice-writer-
 
+# Some complaints about these packages so will try to exclude
+brltty-
+speech-dispatcher-
+
 xfce4
 xfce4-terminal
 task-xfce-desktop
 lsb-release
-nm-tray
+# remove nmtray and use network-manager
+network-manager
 pciutils
 synaptic
 geany
@@ -37,3 +42,20 @@ openssh-server
 vim-gtk3
 installation-report
 rt-tests
+
+# We need to add some more utilities which are likely to be used if following the 2.9 Getting Linuxcnc Methods
+linux-headers-rt-amd64
+dkms
+grub-customizer
+wget
+curl
+gdebi
+
+# These may be missing  Linuxcnc run time dependencies so we will add them just in case
+libgl1-mesa-glx 
+libgl1-mesa-dri 
+xserver-xorg-core
+
+# Keyrings
+debian-archive-keyring
+apt-transport-https
