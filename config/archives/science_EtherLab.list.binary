@@ -1,0 +1,1 @@
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/science_EtherLab.gpg.key.binary.gpg] http://download.opensuse.org/repositories/science:/EtherLab/Debian_12/ ./
