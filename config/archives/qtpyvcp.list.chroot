@@ -1,0 +1,1 @@
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/qtpyvcp.gpg.key.chroot.gpg] http://repository.qtpyvcp.com/apt develop main
