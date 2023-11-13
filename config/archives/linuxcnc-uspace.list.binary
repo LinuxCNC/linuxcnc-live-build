@@ -1,1 +1,2 @@
-deb [arch=amd64] http://buildbot2.highlab.com/debian/ bookworm 2.9-uspace
+deb [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/linuxcnc.gpg.key.binary.gpg] https://www.linuxcnc.org/ bookworm base 2.9-uspace
+deb-src [arch=amd64,arm64 signed-by=/etc/apt/trusted.gpg.d/linuxcnc.gpg.key.binary.gpg] https://www.linuxcnc.org/ bookworm base 2.9-uspace

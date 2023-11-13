@@ -1,6 +1,0 @@
-#!/bin/sh
-# Import the GPG key for the qtpyvcp repository
-# Import the GPG key for the qtpyvcp repository
-gpg --keyserver keys.openpgp.org --recv-keys 2DEC041F290DF85A --keyring /etc/apt/trusted.gpg.d
-curl -sS https://repository.qtpyvcp.com/repo/kcjengr.key | gpg --dearmor | tee /etc/apt/trusted.gpg.d/kcjengr.gpg
-echo "deb [arch=amd64 signed-by=/etc/apt/trusted.gpg.d/kcjengr.gpg] https://repository.qtpyvcp.com/apt develop main " | tee -a /etc/apt/sources.list.d/qtpyvcp.list >/dev/null
