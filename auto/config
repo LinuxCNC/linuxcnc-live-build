@@ -9,10 +9,10 @@ lb config noauto \
 	--binary-images iso-hybrid \
 	--debian-installer live \
 	--archive-areas "main contrib non-free non-free-firmware" \
-	--iso-application "LinuxCNC-2.9.pre" \
+	--iso-application "LinuxCNC-2.9.1" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
-	--iso-volume "LinuxCNC_2.9.pre" \
-	--image-name "LinuxCNC_2.9.pre" \
+	--iso-volume "LinuxCNC_2.9.1" \
+	--image-name "LinuxCNC_2.9.1" \
 	--iso-publisher "www.linuxcnc.org" \
 	--apt-recommends true \
 	--security true \
