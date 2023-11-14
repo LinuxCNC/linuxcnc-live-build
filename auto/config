@@ -4,6 +4,7 @@ set -e
 
 lb config noauto \
 	--linux-packages linux-image-rt \
+	--debootstrap-options "--include=apt-transport-https,ca-certificates,openssl" \
 	--distribution bookworm \
 	--binary-images iso-hybrid \
 	--debian-installer live \

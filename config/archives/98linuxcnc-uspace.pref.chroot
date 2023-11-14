@@ -1,27 +1,27 @@
 package: linuxcnc-uspace
-pin: release o=http://buildbot2.highlab.com/debian/
+pin: release o=https://www.linuxcnc.org/ bookworm base 2.9-uspace 2.9-rt
 Pin-Priority: 500
 
 package: linuxcnc-uspace-dev
-pin: release o=http://buildbot2.highlab.com/debian/
+pin: release o=https://www.linuxcnc.org/ bookworm base 2.9-uspace 2.9-rt
 Pin-Priority: 500
 
 package: linuxcnc-uspace-doc-en
-pin: release o=http://buildbot2.highlab.com/debian/
+pin: release o=https://www.linuxcnc.org/ bookworm base 2.9-uspace 2.9-rt
 Pin-Priority: 500
 
 package: linuxcnc-uspace-doc-de
-pin: release o=http://buildbot2.highlab.com/debian/
+pin: release o=https://www.linuxcnc.org/ bookworm base 2.9-uspace 2.9-rt
 Pin-Priority: 500
 
 package: linuxcnc-uspace-doc-es
-pin: release o=http://buildbot2.highlab.com/debian/
+pin: release o=https://www.linuxcnc.org/ bookworm base 2.9-uspace 2.9-rt
 Pin-Priority: 500
 
 package: linuxcnc-uspace-doc-fr
-pin: release o=http://buildbot2.highlab.com/debian/
+pin: release o=https://www.linuxcnc.org/ bookworm base 2.9-uspace 2.9-rt
 Pin-Priority: 500
 
 package: linuxcnc-uspace-doc-zh-cn
-pin: release o=http://buildbot2.highlab.com/debian/
+pin: release o=https://www.linuxcnc.org/ bookworm base 2.9-uspace 2.9-rt
 Pin-Priority: 500
