@@ -19,6 +19,9 @@ libreoffice-writer-
 brltty-
 speech-dispatcher-
 
+# Do not install Raspberry Pi firmware
+raspi-firmware-
+
 xfce4
 xfce4-terminal
 task-xfce-desktop
