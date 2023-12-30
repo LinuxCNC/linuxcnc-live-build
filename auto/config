@@ -9,14 +9,15 @@ lb config noauto \
 	--binary-images iso-hybrid \
 	--debian-installer live \
 	--archive-areas "main contrib non-free non-free-firmware" \
-	--iso-application "LinuxCNC-2.9.1" \
+	--iso-application "LinuxCNC-2.9.2" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
-	--iso-volume "LinuxCNC_2.9.1" \
-	--image-name "LinuxCNC_2.9.1" \
+	--iso-volume "LinuxCNC_2.9.2" \
+	--image-name "LinuxCNC_2.9.2" \
 	--iso-publisher "www.linuxcnc.org" \
 	--apt-recommends true \
 	--security true \
 	--updates true \
+	--apt-options " --yes --allow-change-held-packages"
 	--parent-mirror-bootstrap http://deb.debian.org/debian \
 	--parent-mirror-binary http://deb.debian.org/debian \
 	--parent-mirror-chroot-security http://deb.debian.org/debian-security \
