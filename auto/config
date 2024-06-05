@@ -17,7 +17,8 @@ lb config noauto \
 	--apt-recommends true \
 	--security true \
 	--updates true \
-	--apt-options " --yes --allow-change-held-packages"
+	--apt-options " --yes --allow-change-held-packages" \
+	--bootappend-install "ipv6.disable=1" \
 	--parent-mirror-bootstrap http://deb.debian.org/debian \
 	--parent-mirror-binary http://deb.debian.org/debian \
 	--parent-mirror-chroot-security http://deb.debian.org/debian-security \
