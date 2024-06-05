@@ -22,7 +22,7 @@ Puts the .iso file in the ```linuxcnc-live-build``` folder.
 
 - NOTE: External repositories provided as a convenience to users if they wish to use companion products. No Software to be installed by this installer.
 
-- NOTE: "ipv6.disable=1" so installation does not stall during network config at sites with no dhcpv6 server.  
+- NOTE: ```ipv6.disable=1``` appended to isolinux kernel command line so installation does not stall during network config at sites with no dhcpv6 server.  
    
 
 
