@@ -21,6 +21,8 @@ Puts the .iso file in the ```linuxcnc-live-build``` folder.
 - Added ```Probe Basic``` repository. To install: ```sudo apt update``` then ```sudo apt install python3-probe-basic```
 
 - NOTE: External repositories provided as a convenience to users if they wish to use companion products. No Software to be installed by this installer.
+
+- NOTE: "ipv6.disable=1" so installation does not stall during network config at sites with no dhcpv6 server.  
    
 
 
