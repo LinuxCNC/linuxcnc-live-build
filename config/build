@@ -6,5 +6,5 @@ Mirror-Bootstrap: http://deb.debian.org/debian/
 
 [FIXME]
 Configuration-Version: 1:20230919
-Name: LinuxCNC_2.9pre
+Name: LinuxCNC_2.9.4
 Type: iso-hybrid
