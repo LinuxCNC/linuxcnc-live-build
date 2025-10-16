@@ -3,6 +3,7 @@
 set -e
 
 lb config noauto \
+	--architectures amd64 \
 	--linux-packages linux-image-rt \
 	--debootstrap-options "--include=apt-transport-https,ca-certificates,openssl" \
 	--distribution bookworm \
