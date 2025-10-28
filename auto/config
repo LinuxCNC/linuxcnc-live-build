@@ -6,14 +6,14 @@ lb config noauto \
 	--architectures amd64 \
 	--linux-packages linux-image-rt \
 	--debootstrap-options "--include=apt-transport-https,ca-certificates,openssl" \
-	--distribution bookworm \
+	--distribution trixie \
 	--binary-images iso-hybrid \
 	--debian-installer live \
 	--archive-areas "main contrib non-free non-free-firmware" \
-	--iso-application "LinuxCNC-2.9.4" \
+	--iso-application "LinuxCNC-2.9.6" \
 	--iso-preparer "emc-developers@lists.sourceforge.net" \
-	--iso-volume "LinuxCNC_2.9.4" \
-	--image-name "linuxcnc_2.9.4" \
+	--iso-volume "LinuxCNC_2.9.6" \
+	--image-name "linuxcnc_2.9.6" \
 	--iso-publisher "www.linuxcnc.org" \
 	--apt-recommends true \
 	--security true \

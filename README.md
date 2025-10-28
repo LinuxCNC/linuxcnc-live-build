@@ -3,7 +3,7 @@
     [ -x /usr/bin/git ] || sudo apt install git
     git clone https://github.com/LinuxCNC/linuxcnc-live-build
     cd linuxcnc-live-build
-    git checkout bookworm
+    git checkout trixie
     [ -x /usr/bin/lb ] || sudo apt install live-build
     lb config
     sudo su
@@ -24,6 +24,8 @@ Puts the .iso file in the ```linuxcnc-live-build``` folder.
 
 - NOTE: ```ipv6.disable=1``` appended to isolinux kernel command line so installation does not stall during network config at sites with no dhcpv6 server.  
    
+# Changes for Trixie 
+- back to using repositories at www.linuxcnc.org
 
 
    

@@ -10,7 +10,6 @@ firmware-bnx2
 firmware-bnx2x
 firmware-brcm80211
 firmware-cavium
-firmware-ipw2x00
 firmware-iwlwifi
 firmware-libertas
 firmware-linux
@@ -22,5 +21,4 @@ firmware-qlogic
 firmware-realtek
 firmware-ti-connectivity
 firmware-zd1211
-hdmi2usb-fx2-firmware
 intel-microcode
