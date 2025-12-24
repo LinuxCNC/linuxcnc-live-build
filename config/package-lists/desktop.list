@@ -23,6 +23,7 @@ speech-dispatcher-
 raspi-firmware-
 
 xfce4
+xfce4-xkb-plugin
 xfce4-terminal
 task-xfce-desktop
 lsb-release
