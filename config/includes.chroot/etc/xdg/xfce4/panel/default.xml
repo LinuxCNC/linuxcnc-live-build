@@ -63,6 +63,7 @@
     <property name="plugin-6" type="string" value="systray">
         <property name="square-icons" type="bool" value="true"/>
     </property>
+    <property name="plugin-7" type="string" value="xkb"/>
     <property name="plugin-8" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
