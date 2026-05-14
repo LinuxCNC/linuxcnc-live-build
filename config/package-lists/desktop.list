@@ -50,6 +50,7 @@ rt-tests
 linux-headers-rt-amd64
 dkms
 grub-customizer
+os-prober
 wget
 curl
 gdebi
