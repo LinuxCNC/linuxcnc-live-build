@@ -1,0 +1,10 @@
+#!/bin/sh
+
+set -e
+
+# Remove the legacy sources.list file to prevent conflicts with DEB822
+if [ -f /etc/apt/sources.list ]; then
+    echo "Purge legacy /etc/apt/sources.list..."
+    rm -f /etc/apt/sources.list
+    apt-get update
+fi
