@@ -1,0 +1,2 @@
+deb [trusted=yes] https://linuxcnc-ethercat.github.io/apt/ trixie main
+
