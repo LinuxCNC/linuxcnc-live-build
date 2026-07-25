@@ -284,34 +284,19 @@ then
 	rm -f "${_TARGET}/splash.svg"
 fi
 
-# Handle BIOS splash screen (isolinux)
-# The splash.png is used by isolinux via the stdmenu.cfg
+# Handle splash screen for both BIOS and UEFI boot
+# The splash.png is created in ${_TARGET} (which is binary/isolinux for normal mode)
+# For BIOS: isolinux uses it directly via stdmenu.cfg (menu background splash.png)
+# For UEFI: GRUB theme expects it at ../splash.png relative to live-theme directory
+#           which means /boot/grub/splash.png
+
 if [ -e "${_TARGET}/splash.png" ]
 then
-	# Splash is already in place for BIOS boot via isolinux
-	Echo_message "Splash screen configured for BIOS boot (isolinux)"
-fi
-
-# Handle UEFI splash screen (GRUB)
-# Copy splash image to GRUB theme directory and configure theme.txt
-if [ -e binary/boot/grub/live-theme/theme.txt ]
-then
-	Echo_message "Configuring GRUB theme for UEFI splash screen support..."
-
-	# Copy splash.png to GRUB theme directory so UEFI GRUB can access it
-	if [ -e "${_TARGET}/splash.png" ]
-	then
-		mkdir -p binary/boot/grub/live-theme
-		cp "${_TARGET}/splash.png" binary/boot/grub/live-theme/splash.png
-	fi
-
-	# Configure the GRUB theme to use the splash image
-	# For UEFI boot, GRUB uses a theme.txt file with desktop-image pointing to the splash
-	sed -i -e 's|^desktop-image:.*|desktop-image: "/boot/grub/live-theme/splash.png"|' \
-		-e 's|^title-text:.*|title-text: ""|' \
-		binary/boot/grub/live-theme/theme.txt
-
-	Echo_message "GRUB theme configured with splash image at /boot/grub/live-theme/splash.png"
+	# Copy splash.png to /boot/grub/ for UEFI GRUB theme support
+	# The theme.txt file contains: desktop-image: "../splash.png"
+	# This relative path resolves to /boot/grub/splash.png when theme is at /boot/grub/live-theme/
+	mkdir -p binary/boot/grub
+	cp "${_TARGET}/splash.png" binary/boot/grub/splash.png
 fi
 
 case "${LB_MODE}" in
