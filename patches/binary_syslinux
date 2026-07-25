@@ -215,7 +215,7 @@ _HOUR="$(date +%H)"
 _MINUTE="$(date +%M)"
 _SECOND="$(date +%S)"
 
-_LINUX_VERSIONS="$(for _LINUX in chroot/boot/vmlinuz-* ; do chroot chroot apt-cache policy $(basename ${_LINUX} | sed -e 's|vmlinuz-|linux-image-|') | awk '/Installed: / { print $2 }' ; done | sort -Vru | tr "\n" " ")"
+_LINUX_VERSIONS="$(for _LINUX in chroot/boot/vmlinuz-* ; do chroot chroot apt-cache policy $(basename ${_LINUX} | sed -e 's|vmlinuz-|linux-image-|') | awk '/Installed: / { print $2 }' ; done | sort -V | tail -1)"
 
 _LIVE_BUILD_VERSION="$(lb --version)"
 _LIVE_BOOT_VERSION="$(chroot chroot apt-cache policy live-boot | awk '/Installed: / { print $2 }')"
@@ -284,11 +284,34 @@ then
 	rm -f "${_TARGET}/splash.svg"
 fi
 
-# Tweak the grub theme to reuse the syslinux background image
-if [ -e binary/boot/grub/live-theme/theme.txt ]; then
-    sed -i -e 's|^desktop-image:.*|desktop-image: "/isolinux/splash.png"|' \
-	-e 's|^title-text:.*|title-text: ""|' \
-	binary/boot/grub/live-theme/theme.txt
+# Handle BIOS splash screen (isolinux)
+# The splash.png is used by isolinux via the stdmenu.cfg
+if [ -e "${_TARGET}/splash.png" ]
+then
+	# Splash is already in place for BIOS boot via isolinux
+	Echo_message "Splash screen configured for BIOS boot (isolinux)"
+fi
+
+# Handle UEFI splash screen (GRUB)
+# Copy splash image to GRUB theme directory and configure theme.txt
+if [ -e binary/boot/grub/live-theme/theme.txt ]
+then
+	Echo_message "Configuring GRUB theme for UEFI splash screen support..."
+
+	# Copy splash.png to GRUB theme directory so UEFI GRUB can access it
+	if [ -e "${_TARGET}/splash.png" ]
+	then
+		mkdir -p binary/boot/grub/live-theme
+		cp "${_TARGET}/splash.png" binary/boot/grub/live-theme/splash.png
+	fi
+
+	# Configure the GRUB theme to use the splash image
+	# For UEFI boot, GRUB uses a theme.txt file with desktop-image pointing to the splash
+	sed -i -e 's|^desktop-image:.*|desktop-image: "/boot/grub/live-theme/splash.png"|' \
+		-e 's|^title-text:.*|title-text: ""|' \
+		binary/boot/grub/live-theme/theme.txt
+
+	Echo_message "GRUB theme configured with splash image at /boot/grub/live-theme/splash.png"
 fi
 
 case "${LB_MODE}" in
